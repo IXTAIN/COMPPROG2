@@ -94,7 +94,7 @@ public class arithmeticgame{
 				}else{
 					System.out.println("=================");
 					System.out.println("WRONG!");
-					System.out.println("Correct Answer: " + (problem0));
+					System.out.println("Correct Answer: " + (problem3));
 					System.out.println("YOUR FINAL SCORE: " + score);
 					System.out.println("=================");
 					break;
