@@ -1,0 +1,106 @@
+package activity;
+
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class arithmeticgame{
+	
+	public static void main(String[] args) {
+
+
+		Scanner s = new Scanner(System.in);
+		Random integer = new Random();
+
+		float answer;
+		int score = 0 ;
+		
+		System.out.println("================="+ '\n' + " ARITHMETIC GAME" + '\n' + "=================" );
+
+		while(true) {
+			
+			int NumberOne = integer.nextInt(50);
+			int NumberTwo = integer.nextInt(50);
+			int operation = integer.nextInt(4);
+			float problem0 = (NumberOne + NumberTwo);
+			float problem1 = Math.round(NumberOne / NumberTwo);
+			float problem2 = (NumberOne * NumberTwo);
+			float problem3 = (NumberOne - NumberTwo);
+			
+			if(operation == 0) {
+				System.out.print(" " + NumberOne + " + " + NumberTwo + " = ");
+				answer = s.nextInt();
+				if(problem0 == answer) {
+					System.out.println("=================");
+					System.out.println(" CORRECT!");
+					System.out.println(" YOUR SCORE: " + (++score));
+					System.out.println("=================");
+				}else {
+					System.out.println("=================");
+					System.out.println("WRONG!");
+					System.out.println("Correct Answer: " + (problem0));
+					System.out.println("FINAL SCORE: " + score);
+					System.out.println("=================");
+					break;
+				}
+			}
+			else if(operation == 1) {
+				System.out.println("Please round your answer to the nearest ones place");
+				System.out.println(" " +NumberOne + " / " + NumberTwo + " = " );
+				answer = s.nextFloat();
+
+				if(problem1 == answer) {
+					System.out.println("=================");
+					System.out.println(" CORRECT!");
+					System.out.println(" YOUR SCORE: " + (++score));
+					System.out.println("=================");
+
+				}else{
+					System.out.println("=================");
+					System.out.println("WRONG!");
+					System.out.println("Correct Answer: " + (problem1));
+					System.out.println("YOUR FINAL SCORE: " + score);
+					System.out.println("=================");
+					break;
+				}
+			}
+			else if(operation == 2) {
+				System.out.print(" " +NumberOne + " * " + NumberTwo + " = ");
+				answer = s.nextFloat();
+
+				if(problem2 == answer) {
+					System.out.println("=================");
+					System.out.println(" CORRECT!");
+					System.out.println(" YOUR SCORE: " + (++score));
+					System.out.println("=================");
+				}else{
+					System.out.println("=================");
+					System.out.println("WRONG!");
+					System.out.println("Correct Answer: " + (problem2));
+					System.out.println("YOUR FINAL SCORE: " + score);
+					System.out.println("=================");
+					break;
+				}
+			}
+			else if(operation == 3) {
+				System.out.print(" " +NumberOne + " - " + NumberTwo + " = ");
+				answer = s.nextFloat();
+
+				if(problem3 == answer) {
+					System.out.println("=================");
+					System.out.println(" CORRECT!");
+					System.out.println(" YOUR SCORE: " + (++score));
+					System.out.println("=================");
+				}else{
+					System.out.println("=================");
+					System.out.println("WRONG!");
+					System.out.println("Correct Answer: " + (problem0));
+					System.out.println("YOUR FINAL SCORE: " + score);
+					System.out.println("=================");
+					break;
+				}
+			}
+		}
+
+	}
+}
