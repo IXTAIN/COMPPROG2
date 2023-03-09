@@ -22,15 +22,12 @@ public class arithmeticgame{
 			int NumberOne = integer.nextInt(50);
 			int NumberTwo = integer.nextInt(50);
 			int operation = integer.nextInt(4);
-			float problem0 = (NumberOne + NumberTwo);
-			float problem1 = Math.round(NumberOne / NumberTwo);
-			float problem2 = (NumberOne * NumberTwo);
-			float problem3 = (NumberOne - NumberTwo);
+		
 			
 			if(operation == 0) {
 				System.out.print(" " + NumberOne + " + " + NumberTwo + " = ");
 				answer = s.nextInt();
-				if(problem0 == answer) {
+				if((NumberOne + NumberTwo) == answer) {
 					System.out.println("=================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
@@ -38,7 +35,7 @@ public class arithmeticgame{
 				}else {
 					System.out.println("=================");
 					System.out.println("WRONG!");
-					System.out.println("Correct Answer: " + (problem0));
+					System.out.println("Correct Answer: " + (NumberOne + NumberTwo));
 					System.out.println("FINAL SCORE: " + score);
 					System.out.println("=================");
 					break;
@@ -49,7 +46,7 @@ public class arithmeticgame{
 				System.out.println(" " +NumberOne + " / " + NumberTwo + " = " );
 				answer = s.nextFloat();
 
-				if(problem1 == answer) {
+				if(Math.round(NumberOne / NumberTwo) == answer) {
 					System.out.println("=================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
@@ -58,7 +55,7 @@ public class arithmeticgame{
 				}else{
 					System.out.println("=================");
 					System.out.println("WRONG!");
-					System.out.println("Correct Answer: " + (problem1));
+					System.out.println("Correct Answer: " + Math.round(NumberOne / NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
 					System.out.println("=================");
 					break;
@@ -68,7 +65,7 @@ public class arithmeticgame{
 				System.out.print(" " +NumberOne + " * " + NumberTwo + " = ");
 				answer = s.nextFloat();
 
-				if(problem2 == answer) {
+				if((NumberOne * NumberTwo) == answer) {
 					System.out.println("=================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
@@ -76,7 +73,7 @@ public class arithmeticgame{
 				}else{
 					System.out.println("=================");
 					System.out.println("WRONG!");
-					System.out.println("Correct Answer: " + (problem2));
+					System.out.println("Correct Answer: " + (NumberOne * NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
 					System.out.println("=================");
 					break;
@@ -86,7 +83,7 @@ public class arithmeticgame{
 				System.out.print(" " +NumberOne + " - " + NumberTwo + " = ");
 				answer = s.nextFloat();
 
-				if(problem3 == answer) {
+				if((NumberOne - NumberTwo) == answer) {
 					System.out.println("=================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
@@ -94,7 +91,7 @@ public class arithmeticgame{
 				}else{
 					System.out.println("=================");
 					System.out.println("WRONG!");
-					System.out.println("Correct Answer: " + (problem3));
+					System.out.println("Correct Answer: " + (NumberOne - NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
 					System.out.println("=================");
 					break;
@@ -104,3 +101,18 @@ public class arithmeticgame{
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
