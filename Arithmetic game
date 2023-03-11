@@ -10,9 +10,6 @@ public class arithmeticgame{
 
 
 		Scanner s = new Scanner(System.in);
-		/* yung new random similar lang siya sa scanner ginagamit yon together with import 
-		java.util.Random sa pag-generate ng radom numbers*/
-		
 		Random integer = new Random();
 
 		float answer;
@@ -22,16 +19,10 @@ public class arithmeticgame{
 
 		while(true) {
 			
-			//Generate randomize numbers
 			int NumberOne = integer.nextInt(50);
 			int NumberTwo = integer.nextInt(50);
 			int operation = integer.nextInt(4);
 		
-			// operation variable will be used to determined the arithmetic operator
-			/* ++score is an increment operation. mag-aadd ng 1 sa value ng score then ayun 
-			yung magiging value ng score*/
-			/* yung Math.round() yung operation sa gitna ng parentheses iroround niya yon 
-			sa nearest integer*/
 			if(operation == 0) {
 				System.out.print(" " + NumberOne + " + " + NumberTwo + " = ");
 				answer = s.nextInt();
