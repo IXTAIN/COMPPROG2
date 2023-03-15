@@ -10,53 +10,55 @@ public class arithmeticgame{
 
 
 		Scanner s = new Scanner(System.in);
+		
+		
 		Random integer = new Random();
 
 		float answer;
 		int score = 0 ;
 		
-		System.out.println("================="+ '\n' + " ARITHMETIC GAME" + '\n' + "=================" );
+		System.out.println("====================="+ '\n' + "   ARITHMETIC GAME" + '\n' + "=====================" );
 
 		while(true) {
 			
-			int NumberOne = integer.nextInt(50);
-			int NumberTwo = integer.nextInt(50);
-			int operation = integer.nextInt(4);
+			float NumberOne = integer.nextInt(50);
+			float NumberTwo = integer.nextInt(50);
+			float operation = integer.nextInt(4);
 		
 			if(operation == 0) {
 				System.out.print(" " + NumberOne + " + " + NumberTwo + " = ");
 				answer = s.nextInt();
 				if((NumberOne + NumberTwo) == answer) {
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
-					System.out.println("=================");
+					System.out.println("=====================");
 				}else {
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println("WRONG!");
 					System.out.println("Correct Answer: " + (NumberOne + NumberTwo));
 					System.out.println("FINAL SCORE: " + score);
-					System.out.println("=================");
+					System.out.println("=====================");
 					break;
 				}
 			}
 			else if(operation == 1) {
-				System.out.println("Please round your answer to the nearest integer");
+				System.out.println("Please round your" + '\n' + "answer to the nearest integer");
 				System.out.println(" " +NumberOne + " / " + NumberTwo + " = " );
 				answer = s.nextFloat();
 
 				if(Math.round(NumberOne / NumberTwo) == answer) {
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
-					System.out.println("=================");
+					System.out.println("=====================");
 
 				}else{
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println("WRONG!");
 					System.out.println("Correct Answer: " + Math.round(NumberOne / NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
-					System.out.println("=================");
+					System.out.println("=====================");
 					break;
 				}
 			}
@@ -65,16 +67,16 @@ public class arithmeticgame{
 				answer = s.nextFloat();
 
 				if((NumberOne * NumberTwo) == answer) {
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
-					System.out.println("=================");
+					System.out.println("=====================");
 				}else{
-					System.out.println("=================");
+					System.out.println("=====================");
 					System.out.println("WRONG!");
 					System.out.println("Correct Answer: " + (NumberOne * NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
-					System.out.println("=================");
+					System.out.println("=====================");
 					break;
 				}
 			}
@@ -83,16 +85,16 @@ public class arithmeticgame{
 				answer = s.nextFloat();
 
 				if((NumberOne - NumberTwo) == answer) {
-					System.out.println("=================");
+					System.out.println("====================");
 					System.out.println(" CORRECT!");
 					System.out.println(" YOUR SCORE: " + (++score));
-					System.out.println("=================");
+					System.out.println("====================");
 				}else{
-					System.out.println("=================");
+					System.out.println("====================");
 					System.out.println("WRONG!");
 					System.out.println("Correct Answer: " + (NumberOne - NumberTwo));
 					System.out.println("YOUR FINAL SCORE: " + score);
-					System.out.println("=================");
+					System.out.println("====================");
 					break;
 				}
 			}
